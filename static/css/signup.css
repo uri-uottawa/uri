@@ -1,0 +1,36 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+}
+
+form{
+  top: 2em;
+}
+
+input[type="file"]{
+  display: none;
+}
+
+div.ui.button{
+  width: 200% !important;
+}
+
+.custom-upload{
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+
+div.container{
+  width: 70%;
+  padding: 0 10em 10em 10em;
+  margin: 0 auto;
+}

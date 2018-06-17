@@ -1,0 +1,26 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+}
+
+form{
+  top: 10em;
+}
+
+div.container{
+  width: 45%;
+  margin: 0 auto;
+}
+
+div.button.ui.button{
+  width: 200px;
+  /* margin-left: auto !important;
+  margin-right: auto !important; */
+  text-align: center;
+  vertical-align: middle;
+}

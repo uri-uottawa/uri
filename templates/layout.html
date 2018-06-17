@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Undergraduate Positions</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/master.css')}}">
+	</head>
+	<body>
+		<div class="container">
+			{% block content %}
+      <div class="ui secondary pointing menu">
+				<div class="item">
+					<div class="ui icon button">
+						<div class="item">
+							<a href="{{url_for('home')}}">
+								<i class="big home icon"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+        <div class="right menu">
+          <div class="item a">
+            <div class="ui icon button">
+							<div class="ui floating dropdown button">
+								<i class="big th icon"></i>
+								<div class="menu">
+									<div class="item">
+										{% if active is not defined %}
+											<p>No Current / Active Projects</p>
+										{% else %}
+											{% for item in active %}
+												<p>
+													<a href="#">{{item[0]}}</a>
+												</p>
+											{% endfor %}
+										{% endif  %}
+									</div>
+								</div>
+							</div>
+            </div>
+          </div>
+          <div class="item">
+						<div class="ui icon button">
+							<div class="ui floating dropdown button box">
+								<i class="big archive icon"></i>
+								<div class="menu">
+									<div class="item">
+										{% if inactive is not none %}
+											<p>No Archived Projects</p>
+										{% else %}
+											{% for item in inactive %}
+											<p>
+												<a href="#">{{item[0]}}</a>
+											</p>
+											{% endfor %}
+										{% endif  %}
+									</div>
+								</div>
+							</div>
+						</div>
+          </div>
+					<div class="divide"></div>
+					<div class="item">
+						<div class="ui icon button">
+							<div class="ui floating dropdown button">
+								<div class="ui tiny images">
+									<img src="https://i.ytimg.com/vi/xEr79LzyLmI/maxresdefault.jpg" alt="{{fname}}'s picture'">
+									<div class="ui big labels">
+										<div class="ui label">
+											{{lname}} {{fname}}
+										</div>
+									</div>
+								</div>
+								<div class="menu pic">
+									<div class="item">
+										<a href="{{url_for('profile')}}">Profile</a>
+									</div>
+									<div class="item">
+										<a href="/logout">logout</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="divide"></div>
+          <div class="item">
+						<div class="ui icon button">
+							<div class="ui floating dropdown button">
+								<i class="big sun outline icon"></i>
+								<div class="menu">
+									<div class="item">
+										<a href="{{url_for('create_project')}}">Create a new project</a>
+									</div>
+								</div>
+							</div>
+						</div>
+          </div>
+        </div>
+      </div>
+			{% endblock %}
+
+			{% block footer %}
+			<footer>
+				<div class="ui inverted vertical footer segment">
+					<div class="ui container">
+						<div class="ui stackable inverted divided equal height stackable grid">
+							<div class="three wide column">
+								<h4 class="ui inverted header">Something Something</h4>
+								<div class="ui inverted link list">
+									<a> All right reserved &#169;</a>
+								</div>
+							</div>
+							<div class="three wide column">
+								<h4 class="ui inverted header">Something Something</h4>
+								<div class="ui inverted link list">
+									<a> Undergraduate Research Initiative <br> </a>
+									<a> Ottawa, ON</a>
+								</div>
+							</div>
+							<div class="three wide column">
+								<h4 class="ui inverted header">General Inquiries</h4>
+								<div class="ui inverted link list">
+									<a>email: uri.uottawa@gmail.com</a>
+								</div>
+							</div>
+							<div class="six wide column">
+								<h4 class="ui inverted header">Something Something</h4>
+								<div class="ui inverted link list">
+									<i></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			{% endblock %}
+		</div>
+	</body>
+	<script type="text/javascript" src="{{url_for('static', filename='js/home.js')}}"></script>
+</html>

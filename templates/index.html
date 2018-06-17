@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+  {{ super() }}
+
+  <div class="container">
+    {{ form.csrf_token }}
+    <form class="ui large form" action="/" method="post">
+      <div class="four fields">
+        <div class="six wide field">
+          <select class="ui fluid dropdown" name="faculty_name" id="faculty">
+            <option>Faculty</option>
+            {% for item in faculty %}
+              <option value="{{item.faculty_id}}">{{item.name}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="eight wide field">
+          <select class="ui fluid dropdown" name="department_name" id="department">
+            <option>Department</option>
+            {% for item in department %}
+              <option value="{{item.department_id}}">{{item.name}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="six wide field">
+          <select class="ui fluid dropdown" name="projects">
+            <option>Research Positions</option>
+            {% for item in undergrad %}
+              <option value="{{item.u_id}}">{{item.name}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="field sbtn">
+          <button class="ui primary button" type = "submit" name = 'submit'>{{ form.submit.label }}</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>URI LOGIN/SIGNUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/signup.css')}}">
+  </head>
+  </head>
+  <body>
+    <div class="container">
+      <form class="ui reply large form" action="{{url_for('register')}}" enctype="multipart/form-data" method="post" name="register_form">
+        {{register_user_form.hidden_tag()}}
+        <div class="fields">
+          <div class="eight wide field">
+            {{register_user_form.fname (placeholder = 'First Name')}}
+          </div>
+          <div class="eight wide field">
+            {{register_user_form.lname (placeholder = 'Last Name')}}
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui action input">
+            {{register_user_form.email (placeholder = 'jchan005')}}
+            <button class="ui button">@uOttawa.ca</button>
+          </div>
+        </div>
+        <div class="fields">
+          <div class="eight wide field">
+            <select class="ui fluid dropdown" name="fal" id='fal'>
+              <option>Faculty</option>
+              {% for item in faculty %}
+                <option value="{{item.faculty_id}}">{{item.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="eight wide field">
+            <select class="ui fluid dropdown" name="dept" id="dept">
+              <option>Department</option>
+              {% for item in department %}
+                <option value="{{item.department_id}}">{{item.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="file-upload" class="custom-upload">
+            <i class="cloud upload icon"></i>Upload Picture
+          </label>
+          {{register_user_form.file (class = 'custom-upload', id='file-upload')}}
+        </div>
+        <div class="fields">
+          <div class="eight wide field">
+            {{register_user_form.password (placeholder='password')}}
+          </div>
+          <div class="eight wide field">
+            {{register_user_form.c_password (placeholder='confirm password')}}
+          </div>
+        </div>
+        <div class="field">
+          {{register_user_form.description}}
+        </div>
+        {{register_user_form.submit(class = 'ui large submit button')}}
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+</html>

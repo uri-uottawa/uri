@@ -1,0 +1,184 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+div.container{
+  position: relative;
+  margin: 0 auto;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  clear: both;
+  padding-top: 10px !important;
+}
+
+a{
+  color: inherit;
+}
+
+div.ui.button{
+  background: inherit !important;
+}
+
+.ui.menu .right.menu .dropdown:last-child
+.menu{
+  right: -35px !important;
+}
+
+div.item.a{
+  margin-right: -25px !important;
+}
+
+.ui.menu .right.menu .dropdown:last-child
+.menu.pic{
+  left: -75px !important;
+}
+
+.divide{
+  width: 20px;
+}
+
+.space{
+  width: 20px;
+  height: auto;
+  display: inline-block;
+}
+
+.sbtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+i{
+  color: black;
+}
+
+div.ui.secondary.pointing.menu{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.item > .button{
+  margin: -1.5em 0 !important;
+}
+
+div.pic{
+  margin-right: -30px !important;
+  margin-bottom: -5px !important;
+}
+
+div.ui.tiny.images img{
+  height: 3em !important;
+  width: auto;
+  margin-left: -64px !important;
+  margin-bottom: -43px !important;
+  border-radius: 5px 0 0 5px;
+}
+
+div.ui.label {
+  height: 2em !important;
+  margin-bottom: -6px !important;
+  border-radius: 0 5px 5px 0 !important;
+  float: right !important;
+}
+
+.ui.images{
+  margin: 0 -6rem 0;
+  float: right;
+}
+
+.text{
+  top: 25px !important;
+}
+
+.hideload{
+  display: none !important;
+  margin-top: 10px !important;
+}
+
+#editbtn{
+  margin-top: 8px !important;
+}
+
+#showDiv{
+  margin-top: 8px !important;
+}
+
+div.container.top{
+  top: 8px;
+}
+
+form{
+  top: 20px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+textarea{
+
+}
+
+div.ui.raised.segment{
+  width: 80%;
+  margin: 0 auto;
+  top: 3em;
+}
+
+.ui.inverted.purple.pointing.menu{
+  margin-top: 20px !important;
+  width: 90%;
+  margin: 0 auto;
+  height: 70px;
+}
+
+div.ui.raised.large.segment.profile{
+  margin: 0 auto;
+  height: 400px !important;
+}
+
+div.ui.card{
+  position: absolute !important;
+}
+
+div.container.secondary{
+  position: relative !important;
+  width: 40em !important;
+  top: 4em;
+  left: -5em !important;
+}
+
+.custom-upload{
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+
+input[type="file"]{
+  display: none;
+}
+
+ui.card, .ui.cards > .card{
+  width: 400px !important;
+  height: auto !important;
+  top: 20px;
+  left: 6px;
+}
+
+div.ui.cards.box{
+  width: 70% !important;
+  margin: 0 auto;
+  margin-top: 6em !important;
+}

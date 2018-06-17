@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+	{{super()}}
+
+	<div class="ui large raised segment">
+		<h4 class="ui header">Welcome {{fname}},</h4>
+		<div id="editMe">
+			{{data}}
+		</div>
+		<button class="ui primary button" id="editbtn">Edit</button>
+		<div class="ui buttons hideload" id="showDiv">
+			<button class="ui button">Cancel</button>
+				<div class="or"></div>
+			<button class="ui positive button" id="savebtn">Save</button>
+		</div>
+	</div>
+	<div class="container">
+		<div class="ui cards box">
+			{% for item in projects %}
+				<div class="card">
+					<div class="content">
+						<div class="header">{{item[0]}}</div>
+						<div class="meta">{{item[1]}}</div>
+						<div class="description">{{item[2]}}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

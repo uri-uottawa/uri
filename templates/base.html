@@ -1,0 +1,65 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Undergraduate Positions</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/master.css')}}">
+	</head>
+	<body>
+		<div class="container">
+			{% block content %}
+
+			<div class="ui inverted purple pointing menu">
+				<a href="#" class="item">Home</a>
+				<div class="right menu">
+					<div class="item">
+						<a href="/login" class="ui inverted button">Login</a>
+						<div class="space"></div>
+						<a href="{{url_for('register')}}" class="ui inverted button">Create Account</a>
+					</div>
+				</div>
+			</div>
+			{% endblock %}
+
+			{% block footer %}
+			<footer>
+				<div class="ui inverted vertical footer segment">
+					<div class="ui container">
+						<div class="ui stackable inverted divided equal height stackable grid">
+							<div class="three wide column">
+								<h4 class="ui inverted header">Something Something</h4>
+								<div class="ui inverted link list">
+									<a> All right reserved &#169;</a>
+								</div>
+							</div>
+							<div class="three wide column">
+								<h4 class="ui inverted header">Something Something</h4>
+								<div class="ui inverted link list">
+									<a> Undergraduate Research Initiative <br> </a>
+									<a> Ottawa, ON</a>
+								</div>
+							</div>
+							<div class="three wide column">
+								<h4 class="ui inverted header">General Inquiries</h4>
+								<div class="ui inverted link list">
+									<a>email: uri.uottawa@gmail.com</a>
+								</div>
+							</div>
+							<div class="six wide column">
+								<h4 class="ui inverted header">Something Something</h4>
+								<div class="ui inverted link list">
+									<i></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			{% endblock %}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block content %}
+  {{super()}}
+  <div class="container">
+    <div class="ui raised large segment profile">
+      <div class="ui special cards">
+        <div class="card">
+          <div class="blurring dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <label for="file-upload" class="custom-upload">
+                    <i class="white cloud upload icon"></i>
+                  </label>
+                  <input type="file" class="custom-upload" id="file-upload">
+                </div>
+              </div>
+            </div>
+            <img class="ui large image" src="https://i.ytimg.com/vi/xEr79LzyLmI/maxresdefault.jpg" alt="Polo's Picture">
+          </div>
+          <div class="content">
+            <a class="header">{{fname}}, {{lname}}</a>
+            <div class="meta">
+              <span class="date">{{dept}}, {{flt}}</span>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="briefcase icon"></i>
+                {% if count == 1 %}
+                  {{count}} Project
+                {% else %}
+                  {{count}} Projects
+                {% endif %}
+              </a>
+            </div>
+          </div>
+        </div>
+      <div class="container secondary">
+        {{desc}}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

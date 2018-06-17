@@ -1,0 +1,74 @@
+
+# @app.route("/research/<faculty_id>")
+# def fal(faculty_id):
+#     """ Search projects by faculty """
+#     data = db.session.query(Project).\
+#                         join(Undergrad, Project.type_id == Undergrad.u_id).\
+#                         join(Faculty, Project.faculty_id == Faculty.faculty_id).\
+#                         filter(Faculty.faculty_id != 3 and Department.faculty_id != 3).\
+#                         filter(Project.faculty_id == faculty_id)
+#     return data
+#
+# @app.route("/research/<department_id>")
+# def dept(department_id):
+#     """ Search projects by department """
+#     data = db.session.query(Project).\
+#                         join(Undergrad, Project.type_id == Undergrad.u_id).\
+#                         join(Department, Project.department_id == Department.department_id).\
+#                         filter(Project.department_id == department_id)
+#     return data
+#
+# @app.route("/research/<type_id>")
+# def project_type(type_id):
+#     """ Search project by types """
+#     data = db.session.query(Project).\
+#                         join(Undergrad, Project.type_id == Undergrad.u_id).\
+#                         filter(Project.type_id == type_id)
+#     return data
+#
+# @app.route("/research/<faculty_id>/<type_id>")
+# def type_and_fal(faculty_id, type_id):
+#     """ Search project by types and faculty """
+#     data = db.session.query(Project).\
+#                         join(Undergrad, Project.type_id == Undergrad.u_id).\
+#                         join(Faculty, Project.faculty_id == Faculty.faculty_id).\
+#                         filter(Project.type_id == type_id).\
+#                         filter(Project.faculty_id == faculty_id)
+#     return data
+#
+# @app.route("/research/<department_id>/<type_id>")
+# def type_and_dept(department_id, type_id):
+#     """ Search project by types and departments """
+#     data = db.session.query(Project).\
+#                         join(Undergrad, Project.type_id == Undergrad.u_id).\
+#                         join(Department, Project.department_id == Department.department_id).\
+#                         filter(Project.type_id == type_id).\
+#                         filter(Project.department_id == department_id)
+#     return data
+#
+# @app.route("/research/<faculty_id>/<department_id>")
+# def dept_fal(faculty_id, department_id):
+#     """ Search project by department_id and faculty """
+#     data = db.session.query(Project).\
+#                         join(Department, Project.department_id == Department.department_id).\
+#                         join(Faculty, Project.faculty_id == Faculty.faculty_id).\
+#                         filter(Project.faculty_id == faculty_id).\
+#                         filter(Project.department_id == department_id)
+#     return data
+#
+# @app.route("/research/<faculty_id>/<department_id>/<type_id>")
+# def proj_fal_dept(faculty_id, department_id, type_id):
+#     """ Search project by types, faculty, department """
+#     data = db.session.query(Project).\
+#                         join(Undergrad, Project.type_id == Undergrad.u_id).\
+#                         join(Faculty, Project.faculty_id == Faculty.faculty_id).\
+#                         join(Department, Project.department_id == Department.department_id).\
+#                         filter(Project.type_id == type_id).\
+#                         filter(Project.faculty_id == faculty_id).\
+#                         filter(Project.department_id == department_id)
+#     return data
+#
+#
+#
+#<a href='https://www.freepik.com/free-vector/people-avatars_761436.htm'>Designed by Freepik</a>
+# credit icons

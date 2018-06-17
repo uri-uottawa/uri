@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block content %}
+   {{super()}}
+   <div class="container">
+     {{form.csrf_token}}
+     <form class="ui large form" action="{{url_for('create_project')}}" method="post">
+       <div class="field">
+         <label>{{form.title.label}}</label>
+         {{form.title}}
+       </div>
+       <div class="field">
+         <textarea name="desc"></textarea>
+       </div>
+       <div class="field">
+         <select class="ui fluid dropdown" name="project">
+           <option>Choose Project</option>
+           {% for item in data %}
+              <option value="{{item.u_id}}">{{item.name}}</option>
+           {% endfor %}
+         </select>
+       </div>
+       <div class="container">
+         <label>Requirements</label>
+         <br>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="cv">
+            <label>Curriculum Vitae</label>
+          </div>
+          <br>
+          <div class="ui checkbox">
+            <input type="checkbox" name="stat">
+            <label>Statement</label>
+          </div>
+        </div>
+        <div class="fields">
+          <div class="six wide field">
+            <input type="number" name="gpa" placeholder="Min. GPA value" min="0">
+          </div>
+          <div class="six wide field">
+            <input type="text" name="other" placeholder="Other">
+          </div>
+        </div>
+       </div>
+       <div class="field">
+         <button type="submit" class="ui primary button" name="button">{{form.submit.label}}</button>
+       </div>
+      </div>
+     </form>
+   </div>
+
+{%endblock%}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>URI LOGIN/SIGNUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/signup.css')}}">
+  </head>
+  </head>
+  <body>
+    <div class="container">
+      <form class="ui reply large form" action="{{url_for('reg_admin')}}" method="post" name="form">
+        {{form.hidden_tag()}}
+        <div class="fields">
+          <div class="eight wide field">
+            {{form.fname (placeholder = 'First Name')}}
+          </div>
+          <div class="eight wide field">
+            {{form.lname (placeholder = 'Last Name')}}
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui action input">
+            {{form.email (placeholder = 'jchan005')}}
+            <button class="ui button">@uOttawa.ca</button>
+          </div>
+        </div>
+        <div class="fields">
+          <div class="eight wide field">
+            {{form.password (placeholder='password')}}
+          </div>
+          <div class="eight wide field">
+            {{form.c_password (placeholder='confirm password')}}
+          </div>
+        </div>
+        {{form.submit(class = 'ui large submit button')}}
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>URI LOGIN/SIGNUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/login.css')}}">
+  </head>
+  </head>
+  <body>
+    <div class="container">
+      {% block content %}
+      <form class="ui large form" action="/login/" method="post" name="login_user_form">
+        {{ login_user_form.hidden_tag() }}
+        <div class="field">
+          <div class="ui action input">
+            {{ login_user_form.email(placeholder = 'Email') }}
+            <button type="ui button">@uOttawa.ca</button>
+          </div>
+        </div>
+        <div class="field">
+          {{ login_user_form.password(placeholder = 'Password') }}
+        </div>
+        {{ login_user_form.submit }}
+      </form>
+      {% endblock %}
+    </div>
+  </body>
+</html>

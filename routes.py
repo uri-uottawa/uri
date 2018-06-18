@@ -170,8 +170,8 @@ def validate(fname, lname, email, file, pwd, cpwd, fal, dept, text):
 
 def getComments():
     data = db.session.query(Annoucements.announce).all()
-    if data is None:
-        return 'Polo'
+    if not data:
+        return ''
     return data[0][0]
 
 
@@ -286,8 +286,6 @@ def user_project():
                      join(Undergrad).\
                      filter(Project.type_id == Undergrad.u_id\
                             and Project.id == current_user.id)
-    for i in data:
-        print(i)
     return data
 
 
